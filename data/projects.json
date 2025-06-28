@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "year": "2025",
+            "projectname": "Kabserve",
+            "madeat": "Cavite State University",
+            "builtwith": ["Next.js", "TypeScript", "JavaScript"],
+            "githublink": "https://github.com/waffensultan/kabserve",
+            "sitelink": ""
+        },
+        {
+            "year": "2025",
+            "projectname": "NameThat",
+            "madeat": "Base Global Buildathon",
+            "builtwith": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit"],
+            "githublink": "https://github.com/kurtoswill/NameThat",
+            "sitelink": ""
+        },
+        {
+            "year": "2024",
+            "projectname": "Adopt Me",
+            "madeat": "Cavite State University",
+            "builtwith": ["HTML", "CSS"],
+            "githublink": "https://github.com/waffensultan/itc-website",
+            "sitelink": ""
+        },
+        {
+            "year": "2024",
+            "projectname": "AWS Spade",
+            "madeat": "Cavite State University",
+            "builtwith": ["Next.js", "TypeScript", "JavaScript"],
+            "githublink": "https://github.com/AWSLC-Spade/AWSLC-SPADE",
+            "sitelink": ""
+        }
+    ]
+}
