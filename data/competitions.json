@@ -1,0 +1,58 @@
+{
+    "competitions": [
+      {
+        "id": "6",
+        "position": "6th",
+        "name": "ICP iThink Hackathon",
+        "project": "FarmChain",
+        "location": "SMX Convention Center",
+        "year": "2025",
+        "link": ""
+      },
+      {
+        "id": "5",
+        "position": "1st",
+        "name": "GDG Sparkfest 2025",
+        "project": "CrowdCon",
+        "location": "The Globe Towers",
+        "year": "2025",
+        "link": "https://www.linkedin.com/posts/kurt-oswill_were-proud-to-share-that-our-team-trycatchus-activity-7339990336938655746-jqee?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      },
+      {
+        "id": "4",
+        "position": "",
+        "name": "BaseBatches Global Buildathon",
+        "project": "NameThat",
+        "location": "Online",
+        "year": "2025",
+        "link": "https://www.linkedin.com/posts/kurt-oswill_pitch-day-the-nerves-were-realbut-so-was-activity-7329663764595728384-XMeO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      },
+      {
+        "id": "3",
+        "position": "4th",
+        "name": "YSES: Future Ideator Quest",
+        "project": "Bayanihan",
+        "location": "UP - Los Banos",
+        "year": "2025",
+        "link": "https://www.linkedin.com/posts/kurt-oswill_hackathonexperience-techforgood-womenintech-activity-7321448407426899985-Qc6B?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      },
+      {
+        "id": "2",
+        "position": "",
+        "name": "GCash AI Week",
+        "project": "GBuddy",
+        "location": "W City Center",
+        "year": "2025",
+        "link": "https://www.linkedin.com/posts/kurt-oswill_on-march-13-our-team-now-dash2impress-activity-7310958363771564033-KVDy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      },
+      {
+        "id": "1",
+        "position": "",
+        "name": "Bluehacks 2025",
+        "project": "Sagip",
+        "location": "Ateneo de Manila University",
+        "year": "2025",
+        "link": "https://www.linkedin.com/posts/kurt-oswill_on-february-23-my-team-lockedin-and-i-participated-activity-7310955576182677504-Shqt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      }
+    ]
+}

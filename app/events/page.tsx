@@ -2,20 +2,21 @@ import React from 'react';
 import Link from 'next/link';
 import {
     Table,
-    TableBody, TableCaption,
+    TableBody,
     TableCell,
     TableHead,
     TableHeader,
     TableRow,
+    TableCaption
 } from "@/components/ui/table";
-import data from '@/data/projects.json';
+import data from '@/data/events.json';
 
 const Page = () => {
-    const projects = data.projects;
+    const events = data.events;
 
     return (
         <div className='flex flex-col gap-8'>
-            <div>
+            <div className='pl-2'>
                 <Link href="/" passHref>
                     <div className='flex items-center gap-1 cursor-pointer text-[#4ade80] group'>
                         <img
@@ -29,39 +30,54 @@ const Page = () => {
                     </div>
                 </Link>
 
-                <h1 className='text-[48px] font-bold -mt-2'>All Projects</h1>
+                <h1 className='text-[48px] font-bold -mt-2'>All Events</h1>
             </div>
 
             <Table>
+                <TableCaption
+                    className='caption-top text-left px-1 opacity-25 mb-3'
+                >
+                    <div className='flex items-center gap-1'>
+                        <img
+                            src='/icons/warning.svg'
+                            alt='Back'
+                            width={20}
+                            height={20}
+                        />
+                        <i>View the full post by clicking the name</i>
+                    </div>
+                </TableCaption>
                 <TableHeader>
                     <TableRow className='border-none'>
+                        <TableHead className='text-light'>Name</TableHead>
+                        <TableHead className='text-light'>Held at</TableHead>
+                        <TableHead className='text-light'>Learned</TableHead>
                         <TableHead className='text-light'>Year</TableHead>
-                        <TableHead className='text-light'>Project</TableHead>
-                        <TableHead className='text-light'>Made at</TableHead>
-                        <TableHead className='text-light'>Built with</TableHead>
-                        <TableHead className='text-light'>Github Link</TableHead>
-                        <TableHead className='text-light'>Site Link</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {projects.map((project) => (
+                    {events.map((event) => (
                         <TableRow
-                            key={project.year + project.projectname}
+                            key={event.id}
                             className='border-b border-white/10'
                         >
-                            <TableCell className='text-muted py-6'>
-                                {project.year}
-                            </TableCell>
                             <TableCell className='font-bold py-6 text-[16px]'>
-                                {project.projectname}
+                                <a
+                                    className='hover:text-[#4ade80] cursor-pointer'
+                                    href={event.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {event.name}
+                                </a>
                             </TableCell>
                             <TableCell className='text-muted py-6'>
-                                {project.madeat}
+                                {event.location}
                             </TableCell>
-                            <TableCell className='max-w-[300px]'>
-                                <div className='flex flex-wrap gap-2 py-2'>
-                                    {Array.isArray(project.builtwith)
-                                        ? project.builtwith.map((tech, index) => (
+                            <TableCell className='text-muted py-6 max-w-[300px]'>
+                                <div className='flex flex-wrap gap-2'>
+                                    {Array.isArray(event.skills)
+                                        ? event.skills.map((tech, index) => (
                                             <span
                                                 key={index}
                                                 className="badge bg-white/10 text-white text-sm px-2 py-1 rounded"
@@ -70,28 +86,14 @@ const Page = () => {
                                             </span>
                                         ))
                                         : <span className="badge bg-white/10 text-white text-sm px-2 py-1 rounded">
-                                            {project.builtwith}
+                                            {event.skills}
                                           </span>}
                                 </div>
                             </TableCell>
-                            <TableCell className='text-muted hover:text-[#4ade80] cursor-pointer py-6'>
-                                <a
-                                    href={project.githublink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {project.githublink}
-                                </a>
+                            <TableCell className='text-muted py-6'>
+                                {event.year}
                             </TableCell>
-                            <TableCell className='text-muted hover:text-[#4ade80] cursor-pointer py-6'>
-                                <a
-                                    href={project.sitelink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {project.sitelink}
-                                </a>
-                            </TableCell>
+
                         </TableRow>
                     ))}
                 </TableBody>
