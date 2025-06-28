@@ -11,6 +11,7 @@ interface Competition {
     location: string;
     year: string;
     link: string;
+    description: string;
 }
 
 function CompetitionCard() {
@@ -18,12 +19,12 @@ function CompetitionCard() {
 
     const topCompetitions = [...data.competitions]
         .sort((a, b) => parseInt(b.id) - parseInt(a.id))
-        .slice(0,5);
-    
+        .slice(0, 5);
+
     return (
         <div className="grid gap-4 w-1/2">
             {topCompetitions.map((competition: Competition) => (
-                <Link 
+                <Link
                     key={competition.id}
                     href={competition.link}
                     target="_blank"
@@ -39,10 +40,12 @@ function CompetitionCard() {
                     onMouseLeave={() => setHoveredId(null)}
                 >
                     <div className="flex justify-between items-start">
-                        <div className='flex gap-3'>
+                        <div className='flex gap-3 flex-wrap'>
                             <h3 className="font-bold text-lg text-white">{competition.name}</h3>
-                            ·
-                            <h3 className="font-bold text-lg text-white">{competition.project}</h3>
+                            <span className="text-lg text-white opacity-50">·</span>
+                            <span className="font-bold text-lg text-[#4ade80]">
+                                {competition.project}
+                            </span>
                         </div>
                         {competition.position && (
                             <span className="bg-white/10 px-2 py-1 rounded text-sm">
@@ -50,12 +53,10 @@ function CompetitionCard() {
                             </span>
                         )}
                     </div>
-                    <div className="mt-2 text-sm text-muted">
+                    <div className="mt-2 text-sm text-muted text-white/60 flex flex-col gap-3">
+                        <p>{competition.description}</p>
                         <p>{competition.location}</p>
                         <p>{competition.year}</p>
-                    </div>
-                    <div className="text-[#4ade80] text-sm mt-2">
-                        View Details →
                     </div>
                 </Link>
             ))}

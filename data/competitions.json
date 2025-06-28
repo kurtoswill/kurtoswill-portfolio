@@ -7,7 +7,8 @@
         "project": "FarmChain",
         "location": "SMX Convention Center",
         "year": "2025",
-        "link": ""
+        "link": "",
+        "description": "I proposed FarmChain, a decentralized platform helping farmers earn more by removing middlemen. Our team Hackshually placed Top 6 at iThink Hackathon and was invited to present at Philippines Blockchain Week 2025—a huge milestone that started with a shared vision."
       },
       {
         "id": "5",
@@ -16,7 +17,8 @@
         "project": "CrowdCon",
         "location": "The Globe Towers",
         "year": "2025",
-        "link": "https://www.linkedin.com/posts/kurt-oswill_were-proud-to-share-that-our-team-trycatchus-activity-7339990336938655746-jqee?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+        "link": "https://www.linkedin.com/posts/kurt-oswill_were-proud-to-share-that-our-team-trycatchus-activity-7339990336938655746-jqee?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+        "description": "Our team TryCatchUs won with CrowdCon, an AI-powered system that detects crowd emergencies in real time and visualizes data to aid faster response. We also received the DEVCON Award for most feasible project—an achievement that reflects our growth and purpose."
       },
       {
         "id": "4",
@@ -25,7 +27,8 @@
         "project": "NameThat",
         "location": "Online",
         "year": "2025",
-        "link": "https://www.linkedin.com/posts/kurt-oswill_pitch-day-the-nerves-were-realbut-so-was-activity-7329663764595728384-XMeO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+        "link": "https://www.linkedin.com/posts/kurt-oswill_pitch-day-the-nerves-were-realbut-so-was-activity-7329663764595728384-XMeO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+        "description": "We were awarded “Most Pivoting Project” for NameThat at the Base Space Buildathon—a recognition not just of our project shift, but of our growth, mindset transformation, and perseverance as student builders navigating real challenges and adapting fast."
       },
       {
         "id": "3",
@@ -34,7 +37,8 @@
         "project": "Bayanihan",
         "location": "UP - Los Banos",
         "year": "2025",
-        "link": "https://www.linkedin.com/posts/kurt-oswill_hackathonexperience-techforgood-womenintech-activity-7321448407426899985-Qc6B?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+        "link": "https://www.linkedin.com/posts/kurt-oswill_hackathonexperience-techforgood-womenintech-activity-7321448407426899985-Qc6B?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+        "description": "We created BAYANIHAN a platform connecting volunteers and organizations for SDG-aligned events and climate action. As the team’s designer, I saw how much we had grown since Bluehacks—collaborating more smoothly, aligning ideas faster, and ultimately placing 4th overall. It was a milestone that reflected both our progress and passion."
       },
       {
         "id": "2",
@@ -43,7 +47,8 @@
         "project": "GBuddy",
         "location": "W City Center",
         "year": "2025",
-        "link": "https://www.linkedin.com/posts/kurt-oswill_on-march-13-our-team-now-dash2impress-activity-7310958363771564033-KVDy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+        "link": "https://www.linkedin.com/posts/kurt-oswill_on-march-13-our-team-now-dash2impress-activity-7310958363771564033-KVDy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+        "description": "On March 13, our team Dash2Impress joined the GCash AI Week Partyrock Hackathon—a fast-paced 1-hour GenAI challenge themed around the future of GCash. We built GBuddy, an AI-powered feature to help parents teach kids financial literacy by managing their digital allowances. It was a thrilling sprint that pushed our creativity, teamwork, and problem-solving to the limit."
       },
       {
         "id": "1",
@@ -52,7 +57,8 @@
         "project": "Sagip",
         "location": "Ateneo de Manila University",
         "year": "2025",
-        "link": "https://www.linkedin.com/posts/kurt-oswill_on-february-23-my-team-lockedin-and-i-participated-activity-7310955576182677504-Shqt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+        "link": "https://www.linkedin.com/posts/kurt-oswill_on-february-23-my-team-lockedin-and-i-participated-activity-7310955576182677504-Shqt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+        "description": "At Bluehacks 2025, my team and I built Sagip, a crowdsourced emergency response platform designed to improve disaster coordination by allowing users to post rescue requests and connect with nearby volunteers. It was our first 24-hour hackathon, and while we didn’t win, it was an incredible experience that taught us the value of teamwork, speed, and designing for real-world impact."
       }
     ]
 }
