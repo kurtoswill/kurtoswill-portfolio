@@ -14,47 +14,46 @@ interface Project {
 }
 
 function ProjectCard() {
-    const [hoveredId, setHoveredId] = useState<string | null>(null);
+    const [hoveredId, setHoveredId] = useState<number | null>(null);
 
     const latestProjects = data.projects.slice(0, 3);
 
     return (
-        <div className="grid gap-4 w-1/2 scroll-mt-[100px]" id='projects'>
-            <h1 className='pl-4'>Recent Projects</h1>
-            
+        <div className="grid gap-4 w-1/2 scroll-mt-[100px]" id="projects">
+            <h1 className="pl-4">Recent Projects</h1>
+
             {latestProjects.map((project: Project, index) => (
                 <Link
                     key={index}
-                    href='/archive'
+                    href="/archive"
                     className={`
                         block w-full no-underline
                         p-4 rounded-lg border border-white/0 
                         hover:border-[#4ade80] transition-all duration-300 
                         hover:bg-white/5 cursor-pointer
-                        ${hoveredId === index ? 'opacity-100' : hoveredId !== null ? 'opacity-50' : 'opacity-100'}
+                        ${
+                        hoveredId === index
+                            ? 'opacity-100'
+                            : hoveredId !== null
+                                ? 'opacity-50'
+                                : 'opacity-100'
+                    }
                     `}
                     onMouseEnter={() => setHoveredId(index)}
                     onMouseLeave={() => setHoveredId(null)}
                 >
                     <div className="flex justify-between items-start">
-                        <div className='flex gap-3 flex-wrap'>
+                        <div className="flex gap-3 flex-wrap">
                             <h3 className="font-bold text-lg text-white">{project.projectname}</h3>
                             <span className="text-lg text-white opacity-50">·</span>
-                            <span className="font-bold text-lg text-white">
-                                {project.madeat}
-                            </span>
+                            <span className="font-bold text-lg text-white">{project.madeat}</span>
                         </div>
                     </div>
-                    <p className='text-muted py-3'>
-                        {project.description}
-                    </p>
+                    <p className="text-muted py-3">{project.description}</p>
                     <div className="mt-2 text-sm text-white/60 flex flex-col gap-4">
                         <div className="flex flex-wrap gap-1">
                             {project.builtwith.map((tech, techIndex) => (
-                                <span
-                                    key={techIndex}
-                                    className="badge"
-                                >
+                                <span key={techIndex} className="badge">
                                     {tech}
                                 </span>
                             ))}
@@ -64,16 +63,14 @@ function ProjectCard() {
                 </Link>
             ))}
 
-            <div className='text-muted'>
+            <div className="text-muted">
                 <Link href="/archive" passHref>
-                    <div className='flex items-center gap-1 cursor-pointer pl-4 group'>
-                        <p className='text-[18px] font-bold text-[#4ade80]'>
-                            View All Projects
-                        </p>
+                    <div className="flex items-center gap-1 cursor-pointer pl-4 group">
+                        <p className="text-[18px] font-bold text-[#4ade80]">View All Projects</p>
                         <img
-                            src='/icons/arrow-right.svg'
-                            alt='Back'
-                            className='transition-all duration-300 group-hover:-translate-x-[-5px] opacity-75'
+                            src="/icons/arrow-right.svg"
+                            alt="Back"
+                            className="transition-all duration-300 group-hover:-translate-x-[-5px] opacity-75"
                         />
                     </div>
                 </Link>
