@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
+import Link from "next/link";
 
 const SECTION_IDS = ['about', 'competitions', 'projects', 'events'];
 
@@ -83,9 +84,18 @@ const Navbar = () => {
                         </li>
                     ))}
                     <li className="mt-18">
-                        <span className="font-bold hover:text-[#4ade80] cursor-pointer">
-                            <a href="/Resume.pdf">VIEW FULL RESUME</a>
-                        </span>
+                        <Link href="/Resume.pdf" passHref>
+                            <div className='flex items-center gap-2 hover:gap-3 cursor-pointer transition-all group'>
+                                <img
+                                    src='/icons/link.svg'
+                                    alt='Back'
+                                    className='transition-all duration-300 group-hover:-scale-105 opacity-75 rotate-145'
+                                />
+                                <p className='text-[18px] font-bold text-[#4ade80] group-hover:scale-105 transition-all'>
+                                    VIEW RESUME
+                                </p>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
             </div>

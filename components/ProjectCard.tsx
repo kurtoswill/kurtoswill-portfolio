@@ -65,11 +65,17 @@ function ProjectCard() {
             ))}
 
             <div className='text-muted'>
-                <Link
-                    href='/archive'
-                    className='cursor-pointer'
-                >
-                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View All Projects</h3>
+                <Link href="/archive" passHref>
+                    <div className='flex items-center gap-1 cursor-pointer pl-4 group'>
+                        <p className='text-[18px] font-bold text-[#4ade80]'>
+                            View All Projects
+                        </p>
+                        <img
+                            src='/icons/arrow-right.svg'
+                            alt='Back'
+                            className='transition-all duration-300 group-hover:-translate-x-[-5px] opacity-75'
+                        />
+                    </div>
                 </Link>
             </div>
         </div>

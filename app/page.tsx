@@ -4,6 +4,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Navbar from "@/components/NavBar";
 import EventsCard from "@/components/EventsCard";
 import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,24 +18,30 @@ export default function Home() {
         <Navbar />
 
           <div className='flex gap-3 mt-24'>
-            <img
-                src='/icons/github.svg'
-                width={28} height={30}
-                alt='github'
-                className='mt-[90px] cursor-pointer'
-            />
-            <img
-                src='/icons/linkedin.svg'
-                width={28} height={30}
-                alt='linkedin'
-                className='mt-[90px] cursor-pointer'
-            />
-            <img
-                src='/icons/instagram.svg'
-                width={28} height={30}
-                alt='ig'
-                className='mt-[90px] cursor-pointer'
-            />
+            <Link href='https://github.com/kurtoswill' target='_blank' rel='noreferrer' passHref>
+              <img
+                  src='/icons/github.svg'
+                  width={28} height={30}
+                  alt='github'
+                  className='mt-[90px] cursor-pointer'
+              />
+            </Link>
+            <Link href='https://www.linkedin.com/in/kurt-oswill/' target='_blank' rel='noreferrer' passHref>
+              <img
+                  src='/icons/linkedin.svg'
+                  width={28} height={30}
+                  alt='linkedin'
+                  className='mt-[90px] cursor-pointer'
+              />
+            </Link>
+            <Link href='https://www.instagram.com/krtwllmc/' target='_blank' rel='noreferrer' passHref>
+              <img
+                  src='/icons/instagram.svg'
+                  width={28} height={30}
+                  alt='ig'
+                  className='mt-[90px] cursor-pointer'
+              />
+            </Link>
           </div>
       </section>
 

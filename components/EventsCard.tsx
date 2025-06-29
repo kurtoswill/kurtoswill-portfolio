@@ -89,11 +89,17 @@ function EventsCard(): JSX.Element {
             ))}
 
             <div className='text-muted'>
-                <Link
-                    href='/events'
-                    className='cursor-pointer'
-                >
-                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View All Events</h3>
+                <Link href="/events" passHref>
+                    <div className='flex items-center gap-1 cursor-pointer pl-4 group'>
+                        <p className='text-[18px] font-bold text-[#4ade80]'>
+                            View All Events
+                        </p>
+                        <img
+                            src='/icons/arrow-right.svg'
+                            alt='Back'
+                            className='transition-all duration-300 group-hover:-translate-x-[-5px] opacity-75'
+                        />
+                    </div>
                 </Link>
             </div>
         </div>
