@@ -1,9 +1,10 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import data from '@/data/events.json';
 
-interface Project {
+interface Event {
+    id: string;
     name: string;
     skills: string[];
     location: string;
@@ -11,51 +12,71 @@ interface Project {
     link: string;
 }
 
-function EventCard() {
+function EventsCard(): JSX.Element {
     const [hoveredId, setHoveredId] = useState<string | null>(null);
 
+    // Slice the events data to only include the top 3 latest events
+    const latestEvents = data.events.slice(0, 3);
+
     return (
-        <div className="grid gap-4 w-1/2" id='events'>
-            {data.events.map((event: Event, index) => (
+        <div className="grid gap-4 w-1/2 mt-[150px]" id="events">
+            {latestEvents.map((event: Event) => (
                 <Link
-                    key={index}
-                    href='/archive'
-                    className={`
-                        block w-full no-underline
-                        p-4 rounded-lg border border-white/0 
+                    key={event.id}
+                    href={event.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full no-underline p-4 rounded-lg border border-white/0 
                         hover:border-[#4ade80] transition-all duration-300 
                         hover:bg-white/5 cursor-pointer
-                        ${hoveredId === index ? 'opacity-100' : hoveredId !== null ? 'opacity-50' : 'opacity-100'}
+                        ${
+                            hoveredId === event.id
+                                ? 'opacity-100'
+                                : hoveredId !== null
+                                ? 'opacity-50'
+                                : 'opacity-100'
+                        }
                     `}
-                    onMouseEnter={() => setHoveredId(index)}
+                    onMouseEnter={() => setHoveredId(event.id)}
                     onMouseLeave={() => setHoveredId(null)}
                 >
                     <div className="flex justify-between items-start">
-                        <div className='flex gap-3 flex-wrap'>
-                            <h3 className="font-bold text-lg text-white">{project.projectname}</h3>
+                        <div className="flex gap-3 flex-wrap">
+                            <h3 className="font-bold text-lg text-white">
+                                {event.name}
+                            </h3>
                             <span className="text-lg text-white opacity-50">·</span>
-                            <span className="font-bold text-lg text-[#4ade80]">
-                                {project.madeat}
+                            <span className="font-bold text-lg text-white">
+                                {event.location}
                             </span>
                         </div>
+                        <span className="text-sm text-white/50">{event.year}</span>
                     </div>
                     <div className="mt-2 text-sm text-white/60 flex flex-col gap-3">
                         <div className="flex flex-wrap gap-1">
-                            {project.builtwith.map((tech, techIndex) => (
+                            {event.skills.map((skill, skillIndex) => (
                                 <span
-                                    key={techIndex}
+                                    key={skillIndex}
                                     className="badge"
                                 >
-                                    {tech}
+                                    {skill}
                                 </span>
                             ))}
                         </div>
-                        <p>{project.year}</p>
                     </div>
                 </Link>
             ))}
+
+            <div className='mt-4 text-muted'>
+                <Link
+                    href='/events'
+                    className='cursor-pointer'
+                >
+                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View All Events</h3>
+                </Link>
+            </div>
         </div>
     );
 }
 
-export default ProjectCard;
+export default EventsCard;

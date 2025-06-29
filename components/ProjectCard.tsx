@@ -10,6 +10,7 @@ interface Project {
     builtwith: string[];
     githublink: string;
     sitelink: string;
+    description: string;
 }
 
 function ProjectCard() {
@@ -35,12 +36,15 @@ function ProjectCard() {
                         <div className='flex gap-3 flex-wrap'>
                             <h3 className="font-bold text-lg text-white">{project.projectname}</h3>
                             <span className="text-lg text-white opacity-50">·</span>
-                            <span className="font-bold text-lg text-[#4ade80]">
+                            <span className="font-bold text-lg text-white">
                                 {project.madeat}
                             </span>
                         </div>
                     </div>
-                    <div className="mt-2 text-sm text-white/60 flex flex-col gap-3">
+                    <p className='text-muted py-3'>
+                        {project.description}
+                    </p>
+                    <div className="mt-2 text-sm text-white/60 flex flex-col gap-4">
                         <div className="flex flex-wrap gap-1">
                             {project.builtwith.map((tech, techIndex) => (
                                 <span
@@ -55,6 +59,15 @@ function ProjectCard() {
                     </div>
                 </Link>
             ))}
+
+            <div className='text-muted'>
+                <Link
+                    href='/archive'
+                    className='cursor-pointer'
+                >
+                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View All Projects</h3>
+                </Link>
+            </div>
         </div>
     );
 }

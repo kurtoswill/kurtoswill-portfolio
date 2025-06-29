@@ -14,7 +14,7 @@ const Page = () => {
     const competitions = data.competitions;
 
     return (
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-8 mt-[100px]'>
             <div>
                 <Link href="/" passHref>
                     <div className='flex items-center gap-1 cursor-pointer text-[#4ade80] group'>
@@ -43,7 +43,7 @@ const Page = () => {
                             width={20}
                             height={20}
                         />
-                        <i>View the full post by clicking the name</i>
+                        <i>View the full post by clicking the competition name</i>
                     </div>
                 </TableCaption>
                 <TableHeader>
@@ -75,7 +75,7 @@ const Page = () => {
                                 </a>
                             </TableCell>
                             <TableCell className='text-muted py-6'>
-                                    {competition.name}
+                                    {competition.project}
                             </TableCell>
                             <TableCell className='text-muted py-6'>
                                 {competition.location}

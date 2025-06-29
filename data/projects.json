@@ -6,7 +6,8 @@
             "madeat": "Cavite State University",
             "builtwith": ["Next.js", "TypeScript", "JavaScript"],
             "githublink": "https://github.coma/waffensultan/kabserve",
-            "sitelink": ""
+            "sitelink": "",
+            "description": "KabServe is a platform that helps current and incoming Cavite State University students discover campus organizations that match their interests, making it easier to find the right community."
         },
         {
             "year": "2025",
@@ -14,15 +15,17 @@
             "madeat": "Base Global Buildathon",
             "builtwith": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit", "Supabase"],
             "githublink": "https://github.com/kurtoswill/NameThat",
-            "sitelink": ""
+            "sitelink": "",
+            "description": "NameThat is a community-driven naming platform where users upload images and crowdsource creative name suggestions through voting or open submissions. Built on the Base blockchain, it brings transparency and ownership to collaborative naming."
         },
         {
             "year": "2024",
-            "projectname": "Adopt Me",
+            "projectname": "AdoptMe",
             "madeat": "Cavite State University",
             "builtwith": ["HTML", "CSS"],
             "githublink": "https://github.com/waffensultan/itc-website",
-            "sitelink": ""
+            "sitelink": "",
+            "description":"AdoptMe was our project for Introduction to Computing—a neobrutalist-style platform designed for pet shelters to share information about adoptable animals. It aimed to promote pet adoption by making it easy for users to browse available pets and learn about their stories."
         },
         {
             "year": "2024",
@@ -30,7 +33,8 @@
             "madeat": "Cavite State University",
             "builtwith": ["Next.js", "TypeScript", "JavaScript"],
             "githublink": "https://github.com/AWSLC-Spade/AWSLC-SPADE",
-            "sitelink": ""
+            "sitelink": "",
+            "description": "I was tasked as a student developer under AWS Spade to build our organization’s website—my first real experience using Next.js. It marked the beginning of my journey into web development, where I discovered my passion for creating clean, functional, and responsive user interfaces. This project laid the foundation for everything I’ve built since."
         }
     ]
 }

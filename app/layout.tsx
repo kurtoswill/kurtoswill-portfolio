@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="relative my-[25px] mx-[300px] overflow-y-auto">
+      <body className="relative my-[25px] mx-[300px]">
         <MouseGradient />
         {children}
       </body>

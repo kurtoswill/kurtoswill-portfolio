@@ -14,7 +14,7 @@ const Page = () => {
     const projects = data.projects;
 
     return (
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-8 mt-[100px]'>
             <div>
                 <Link href="/" passHref>
                     <div className='flex items-center gap-1 cursor-pointer text-[#4ade80] group'>
@@ -64,7 +64,7 @@ const Page = () => {
                                         ? project.builtwith.map((tech, index) => (
                                             <span
                                                 key={index}
-                                                className="badge bg-white/10 text-white text-sm px-2 py-1 rounded"
+                                                className="badge bg-white/10 text-white text-sm px-1 py-1 rounded"
                                             >
                                                 {tech}
                                             </span>

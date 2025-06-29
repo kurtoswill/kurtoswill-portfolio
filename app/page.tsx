@@ -2,6 +2,7 @@ import Image from "next/image";
 import CompetitionCard from "@/components/CompetitionCard";
 import ProjectCard from "@/components/ProjectCard";
 import Navbar from "@/components/NavBar";
+import EventsCard from "@/components/EventsCard";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
 
         <CompetitionCard />
         <ProjectCard />
+        <EventsCard />
       </section>
 
     </div>

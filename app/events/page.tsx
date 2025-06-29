@@ -15,7 +15,7 @@ const Page = () => {
     const events = data.events;
 
     return (
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-8 mt-[100px]'>
             <div className='pl-2'>
                 <Link href="/" passHref>
                     <div className='flex items-center gap-1 cursor-pointer text-[#4ade80] group'>

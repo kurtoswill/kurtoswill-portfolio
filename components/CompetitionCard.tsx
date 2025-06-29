@@ -43,7 +43,7 @@ function CompetitionCard() {
                         <div className='flex gap-3 flex-wrap'>
                             <h3 className="font-bold text-lg text-white">{competition.name}</h3>
                             <span className="text-lg text-white opacity-50">·</span>
-                            <span className="font-bold text-lg text-[#4ade80]">
+                            <span className="font-bold text-lg text-white">
                                 {competition.project}
                             </span>
                         </div>
@@ -61,14 +61,23 @@ function CompetitionCard() {
                 </Link>
             ))}
 
-            <Link
-                href='./resume.pdf'
-                className='cursor-pointer'
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View Full Resume</h3>
-            </Link>
+            <div className='flex justify-between items-center mt-10 text-muted'>
+                <Link
+                    href='/competitions'
+                    className='cursor-pointer'
+                >
+                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View All Competitions</h3>
+                </Link>
+                <Link
+                    href='./resume.pdf'
+                    className='cursor-pointer'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View Full Resume</h3>
+                </Link>
+            </div>
+
         </div>
     );
 }
