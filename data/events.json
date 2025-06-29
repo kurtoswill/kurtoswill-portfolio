@@ -1,6 +1,26 @@
 {
   "events": [
     {
+      "id": "8",
+      "name": "Philippine Blockchain Week",
+      "skills": ["Networking", "Blockchain"],
+      "location": "SMX Convention Center",
+      "year": "2025",
+      "link": "https://www.linkedin.com/posts/kurt-oswill_great-energy-at-philippine-blockchain-week-activity-7345003332031168512-pM9s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/pbw.jpg",
+      "description": "Incredible energy from the local Web3 community — builders, founders, and thought leaders all in one space. The Philippines continues to rise as a hub for blockchain innovation.\n\nGreat reconnecting with Sir Emmanuel Ignacio of Coins.ph (last saw each other at Blockchain Decoders), and for the highlight of the week: Crypto Fight Night — unforgettable!"
+    },
+    {
+      "id": "7",
+      "name": "CryptoBilis",
+      "skills": ["Business", "Networking", "Blockchain"],
+      "location": "Metrotent, Pasig",
+      "year": "2025",
+      "link": "https://www.linkedin.com/posts/kurt-oswill_thank-you-to-christine-mae-chavez-for-the-activity-7345001888511115265-1TRC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/cryptobilis.jpg",
+      "description": "Thanks to Christine Mae Chavez (Metapool) and Base Philippines for the invite! Great to connect with Web3 builders, including CoreDAO’s country leads. The CryptoBilis booths were a highlight — full of innovation. Also celebrated my first-ever Pizza Day!"
+    },
+    {
       "id": "6",
       "name": "Based Space",
       "skills": ["Business", "Pitching", "Blockchain"],
