@@ -39,6 +39,9 @@
     --badge-text: #a7f3d0;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--background);
@@ -64,6 +67,10 @@ code {
 ::selection {
   background: var(--text-accent);
   color: var(--background);
+}
+
+.navbar-text {
+  opacity: 50%;
 }
 
 /* Utility classes */
@@ -106,4 +113,16 @@ code {
     display: inline-block;
     margin-right: 0.5rem;
   }
+}
+
+.custom-hover {
+  transform: translateX(0); /* Base position */
+  transition: transform 0.3s ease-in-out; /* Smooth transition globally */
+}
+
+.custom-hover:hover {
+  transform: translateX(40px);
+}
+.custom-hover.active {
+  transform: translateX(30px);
 }

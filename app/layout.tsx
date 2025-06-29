@@ -10,16 +10,16 @@ export const metadata = {
 }
 
 export default function RootLayout({
-                                     children,
-                                   }: {
+  children,
+}: {
   children: React.ReactNode
 }) {
   return (
-      <html lang="en" className={inter.className}>
-      <body className="relative my-[100px] mx-[350px] overflow-hidden">
-      <MouseGradient />
-      {children}
+    <html lang="en" className={inter.className}>
+      <body className="relative my-[25px] mx-[300px] overflow-y-auto">
+        <MouseGradient />
+        {children}
       </body>
-      </html>
+    </html>
   )
 }

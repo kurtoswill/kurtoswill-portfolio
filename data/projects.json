@@ -12,7 +12,7 @@
             "year": "2025",
             "projectname": "NameThat",
             "madeat": "Base Global Buildathon",
-            "builtwith": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit"],
+            "builtwith": ["Next.js", "TypeScript", "JavaScript", "MiniKit", "OnChainKit", "Supabase"],
             "githublink": "https://github.com/kurtoswill/NameThat",
             "sitelink": ""
         },
@@ -26,7 +26,7 @@
         },
         {
             "year": "2024",
-            "projectname": "AWS Spade",
+            "projectname": "AWS Spade Website",
             "madeat": "Cavite State University",
             "builtwith": ["Next.js", "TypeScript", "JavaScript"],
             "githublink": "https://github.com/AWSLC-Spade/AWSLC-SPADE",

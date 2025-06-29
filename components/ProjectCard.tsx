@@ -16,7 +16,7 @@ function ProjectCard() {
     const [hoveredId, setHoveredId] = useState<string | null>(null);
 
     return (
-        <div className="grid gap-4 w-1/2">
+        <div className="grid gap-4 w-1/2" id='projects'>
             {data.projects.map((project: Project, index) => (
                 <Link
                     key={index}

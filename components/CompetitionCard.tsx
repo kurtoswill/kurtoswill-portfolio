@@ -22,7 +22,7 @@ function CompetitionCard() {
         .slice(0, 5);
 
     return (
-        <div className="grid gap-4 w-1/2">
+        <div className="grid gap-4 w-1/2 pb-[150px]" id='competitions'>
             {topCompetitions.map((competition: Competition) => (
                 <Link
                     key={competition.id}
@@ -54,12 +54,21 @@ function CompetitionCard() {
                         )}
                     </div>
                     <div className="mt-2 text-sm text-muted text-white/60 flex flex-col gap-3">
-                        <p>{competition.description}</p>
+                        <p className='text-[16px]'>{competition.description}</p>
                         <p>{competition.location}</p>
                         <p>{competition.year}</p>
                     </div>
                 </Link>
             ))}
+
+            <Link
+                href='./resume.pdf'
+                className='cursor-pointer'
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View Full Resume</h3>
+            </Link>
         </div>
     );
 }
