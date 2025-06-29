@@ -16,9 +16,13 @@ interface Project {
 function ProjectCard() {
     const [hoveredId, setHoveredId] = useState<string | null>(null);
 
+    const latestProjects = data.projects.slice(0, 3);
+
     return (
         <div className="grid gap-4 w-1/2" id='projects'>
-            {data.projects.map((project: Project, index) => (
+            <h1 className='pl-4'>Recent Projects</h1>
+            
+            {latestProjects.map((project: Project, index) => (
                 <Link
                     key={index}
                     href='/archive'

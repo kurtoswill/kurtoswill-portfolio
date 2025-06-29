@@ -1,15 +1,18 @@
 'use client';
-import React, { useState } from 'react';
+import React, {JSX, useState} from 'react';
 import Link from 'next/link';
 import data from '@/data/events.json';
+import Image from "next/image";
 
 interface Event {
-    id: string;
-    name: string;
-    skills: string[];
-    location: string;
-    year: string;
-    link: string;
+  id: string;
+  name: string;
+  skills: string[];
+  location: string;
+  year: string;
+  link: string;
+  image: string;
+  description: string;
 }
 
 function EventsCard(): JSX.Element {
@@ -20,6 +23,8 @@ function EventsCard(): JSX.Element {
 
     return (
         <div className="grid gap-4 w-1/2 mt-[150px]" id="events">
+            <h1 className='pl-4'>Recent Events</h1>
+
             {latestEvents.map((event: Event) => (
                 <Link
                     key={event.id}
@@ -52,7 +57,23 @@ function EventsCard(): JSX.Element {
                         </div>
                         <span className="text-sm text-white/50">{event.year}</span>
                     </div>
-                    <div className="mt-2 text-sm text-white/60 flex flex-col gap-3">
+
+
+                    <div className="py-4 flex gap-4">
+                        <div className="shrink-0">
+                            <Image
+                                src={event.image}
+                                alt="images"
+                                width={200}
+                                height={100}
+                                className="rounded-lg"
+                            />
+                        </div>
+                        <p className="flex-1">{event.description}</p>
+                    </div>
+
+
+                    <div className="mt-2 text-sm text-white/60 flex flex-col gap-3 items-end">
                         <div className="flex flex-wrap gap-1">
                             {event.skills.map((skill, skillIndex) => (
                                 <span
@@ -67,7 +88,7 @@ function EventsCard(): JSX.Element {
                 </Link>
             ))}
 
-            <div className='mt-4 text-muted'>
+            <div className='text-muted'>
                 <Link
                     href='/events'
                     className='cursor-pointer'

@@ -6,7 +6,9 @@
       "skills": ["Business", "Pitching", "Blockchain"],
       "location": "The Blokc",
       "year": "2025",
-      "link": "https://www.linkedin.com/posts/kurt-oswill_grateful-to-have-joined-an-eye-opening-session-activity-7329663047470342144-gqa5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      "link": "https://www.linkedin.com/posts/kurt-oswill_grateful-to-have-joined-an-eye-opening-session-activity-7329663047470342144-gqa5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/basedspace.jpg",
+      "description": "Joining the Base Philippines Buildathon was a turning point for our team, TryCatch Us. With mentorship from Eli Becislao, we didn’t just refine our project—we refined our purpose. The experience gave us confidence, clarity, and a stronger bond as builders. To students out there: this is your sign to jump in."
     },
     {
       "id": "5",
@@ -14,7 +16,9 @@
       "skills": ["Web3", "Blockchain", "Solidity", "Smart Transactions"],
       "location": "Cavite State University",
       "year": "2025",
-      "link": "https://www.linkedin.com/posts/kurt-oswill_still-buzzing-from-an-inspiring-blockchain-activity-7329659575534518272-RD8v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      "link": "https://www.linkedin.com/posts/kurt-oswill_still-buzzing-from-an-inspiring-blockchain-activity-7329659575534518272-RD8v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/blockchain.jpg",
+      "description": "Grateful to have attended the blockchain event at Cavite State University! Huge thanks to Coins.ph, Bitskwela, and Sonic for sharing valuable insights that fueled my curiosity and passion for Web3. Special thanks to Jiro Reyes for the inspiring talk—it reminded me why I started building in the space."
     },
     {
       "id": "4",
@@ -22,7 +26,9 @@
       "skills": ["Arduino"],
       "location": "STI College Cubao",
       "year": "2025",
-      "link": "https://www.linkedin.com/posts/kurt-oswill_last-march-22-we-had-the-opportunity-to-activity-7321444144197890049-Q4E4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      "link": "https://www.linkedin.com/posts/kurt-oswill_last-march-22-we-had-the-opportunity-to-activity-7321444144197890049-Q4E4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/arduinoday.jpg",
+      "description": "Last March 22, we attended Arduino Day Philippines at STI Cubao—a fun and inspiring event where we saw amazing robots built by students and makers. I was especially moved by how the event uplifted young innovators, providing schools with tools and opportunities to support the next generation of tech builders.\n"
     },
     {
       "id": "3",
@@ -30,7 +36,9 @@
       "skills": ["FinTech", "AI", "Data"],
       "location": "W City Center",
       "year": "2025",
-      "link": "https://www.linkedin.com/posts/kurt-oswill_on-march-13-our-team-now-dash2impress-activity-7310958363771564033-KVDy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      "link": "https://www.linkedin.com/posts/kurt-oswill_on-march-13-our-team-now-dash2impress-activity-7310958363771564033-KVDy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/gdfg.jpg",
+      "description": "We had the incredible opportunity to be part of the first-ever GDFG (Good Data for Good) School Caravan, hosted by GCash and led by their Chief Data Officer, Sara Venturina. During the session, we learned directly from industry professionals and even collaborated with previous hackathon winners. The experience deepened our understanding of AI, data, and fintech—and gave us practical insights into how these technologies are applied in the real world. "
     },
     {
       "id": "2",
@@ -38,7 +46,9 @@
       "skills": ["CyberSecurity"],
       "location": "University of Batangas",
       "year": "2024",
-      "link": "https://www.linkedin.com/posts/kurt-oswill_technexus-campussummit2024-campusdevcon-activity-7271509728344567808-zMkN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      "link": "https://www.linkedin.com/posts/kurt-oswill_technexus-campussummit2024-campusdevcon-activity-7271509728344567808-zMkN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/devcon.jpg",
+      "description": "Thrilled to have attended **Campus DEVCON: Tech Nexus** at the University of Batangas with friends! One of the highlights was joining **DEVCON Kids**, where tech met fun—I even scored the highest in one of their interactive fruit-powered games! Grateful for the opportunity to learn, play, and grow in such an inspiring space. Cheers to more tech events and meaningful connections ahead!\n"
     },
     {
       "id": "1",
@@ -46,7 +56,9 @@
       "skills": ["Cloud Computing", "Networking"],
       "location": "Cavite State University",
       "year": "2024",
-      "link": "https://www.linkedin.com/posts/kenneth-hular-chop0915_aws-learning-club-spade-november-26-2024-ugcPost-7267202934478651395-ZuBI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY"
+      "link": "https://www.linkedin.com/posts/kenneth-hular-chop0915_aws-learning-club-spade-november-26-2024-ugcPost-7267202934478651395-ZuBI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFJTe4cB7-S_mrdsvUXrcpb-2klJ_gvLykY",
+      "image": "/images/kickoff.jpg",
+      "description": "Attending the AWS Learning Club – Spade kick-off was an inspiring experience. Mr. Paul Sears’ insightful talk on cloud computing helped clarify many of my questions about the field. It was a great opportunity to deepen my interest in tech and connect with the CS community at Cavite State University."
     }
   ]
 }

@@ -13,7 +13,7 @@ const MouseGradient = () => {
             if (gradientRef.current) {
                 gradientRef.current.style.background = `
           radial-gradient(
-            400px circle at ${x}px ${y}px,
+            500px circle at ${x}px ${y}px,
             rgba(74, 222, 128, 0.08),
             transparent 100%
           )

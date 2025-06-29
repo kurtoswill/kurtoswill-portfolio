@@ -3,6 +3,7 @@ import CompetitionCard from "@/components/CompetitionCard";
 import ProjectCard from "@/components/ProjectCard";
 import Navbar from "@/components/NavBar";
 import EventsCard from "@/components/EventsCard";
+import React from "react";
 
 export default function Home() {
   return (
@@ -14,13 +15,44 @@ export default function Home() {
           I design thoughtful, real-world web experiences that solve real problems.
         </p>
         <Navbar />
+
+          <div className='flex gap-3 mt-24'>
+            <img
+                src='/icons/github.svg'
+                width={28} height={30}
+                alt='github'
+                className='mt-[90px] cursor-pointer'
+            />
+            <img
+                src='/icons/linkedin.svg'
+                width={28} height={30}
+                alt='linkedin'
+                className='mt-[90px] cursor-pointer'
+            />
+            <img
+                src='/icons/instagram.svg'
+                width={28} height={30}
+                alt='ig'
+                className='mt-[90px] cursor-pointer'
+            />
+          </div>
       </section>
 
+
+
       <section className='flex flex-col items-end'>
+
         <div className='pb-[100px] flex flex-col gap-4 w-1/2 text-muted text-[16px] pl-4 pt-3' >
-          <p>
-            I’m a front-end developer passionate about building <a className='text-white font-medium'>accessible, detail-driven interfaces</a> that blend thoughtful design with robust engineering. I thrive at the intersection of <a className='text-white font-medium'>design and development</a>—where usability, performance, and creativity come together to create meaningful digital experiences.
-          </p>
+          <div className='flex gap-4 shrink-0'>
+            <Image src='/images/kurtoswill.jpeg' alt='my picture'
+                   width={300} height={100}
+                   className='rounded-lg'
+            />
+            <p>
+              I’m a front-end developer passionate about building <a className='text-white font-medium'>accessible, detail-driven interfaces</a> that blend thoughtful design with robust engineering. I thrive at the intersection of <a className='text-white font-medium'>design and development</a>—where usability, performance, and creativity come together to create meaningful digital experiences.
+            </p>
+          </div>
+
           <p>
             Currently, I’m a Computer Science student at <a className='text-white font-medium'>Cavite State University</a>, actively seeking front-end opportunities where I can grow and contribute. I primarily work with React, TypeScript, and Tailwind CSS, and I’ve started exploring blockchain development through decentralized app projects and smart contract integration.
           </p>
@@ -31,7 +63,6 @@ export default function Home() {
             Outside of tech, I enjoy designing, gaming, and building passion projects with friends while continuously leveling up my skills.
           </p>
         </div>
-
 
         <CompetitionCard />
         <ProjectCard />

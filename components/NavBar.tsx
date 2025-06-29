@@ -83,6 +83,31 @@ const Navbar = () => {
                 <span>EVENTS</span>
               </a>
             </li>
+
+              <li
+                  className={`group ${
+                      activeSection === 'contact' ? 'active' : ''
+                  }`}
+              >
+                  <a
+                      href="/"
+                      className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
+                          activeSection === 'contact' ? 'text-white' : 'text-white/25 hover:text-white'
+                      }`}
+                      onClick={() => setActiveSection('contact')}
+                  >
+              <span className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
+                  activeSection === 'contact' ? 'w-12 opacity-100' : 'w-4 group-hover:w-10 group-hover:opacity-100'
+              }`}></span>
+                      <span>CONTACT</span>
+                  </a>
+              </li>
+
+              <li className='mt-18 '>
+                  <span className='font-bold hover:text-[#4ade80] cursor-pointer'>
+                      <a href='/Resume.pdf'>VIEW FULL RESUME</a>
+                  </span>
+              </li>
           </ul>
         </div>
       </nav>

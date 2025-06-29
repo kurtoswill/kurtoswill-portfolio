@@ -19,10 +19,12 @@ function CompetitionCard() {
 
     const topCompetitions = [...data.competitions]
         .sort((a, b) => parseInt(b.id) - parseInt(a.id))
-        .slice(0, 5);
+        .slice(0, 3);
 
     return (
         <div className="grid gap-4 w-1/2 pb-[150px]" id='competitions'>
+            <h1 className='pl-4'>Recent Competitions</h1>
+
             {topCompetitions.map((competition: Competition) => (
                 <Link
                     key={competition.id}
@@ -61,20 +63,12 @@ function CompetitionCard() {
                 </Link>
             ))}
 
-            <div className='flex justify-between items-center mt-10 text-muted'>
+            <div className='flex justify-between items-center mt-4 text-muted'>
                 <Link
                     href='/competitions'
                     className='cursor-pointer'
                 >
                     <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View All Competitions</h3>
-                </Link>
-                <Link
-                    href='./resume.pdf'
-                    className='cursor-pointer'
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h3 className='pl-4 text-[18px] font-bold hover:text-[#4ade80]'>View Full Resume</h3>
                 </Link>
             </div>
 
