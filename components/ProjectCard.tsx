@@ -19,7 +19,7 @@ function ProjectCard() {
     const latestProjects = data.projects.slice(0, 3);
 
     return (
-        <div className="grid gap-4 w-1/2" id='projects'>
+        <div className="grid gap-4 w-1/2 scroll-mt-[100px]" id='projects'>
             <h1 className='pl-4'>Recent Projects</h1>
             
             {latestProjects.map((project: Project, index) => (

@@ -1,117 +1,96 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+
+const SECTION_IDS = ['about', 'competitions', 'projects', 'events'];
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
+    const [activeSection, setActiveSection] = useState<string>('about');
+    const isManuallyScrolling = useRef(false);
 
-  return (
-      <nav className="mt-18">
-        <div>
-          <ul className="flex flex-col gap-4">
-            <li
-                className={`group ${
-                    activeSection === 'about' ? 'active' : ''
-                }`}
-            >
-              <a
-                  href="#about"
-                  className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
-                      activeSection === 'about' ? 'text-white' : 'text-white/25 hover:text-white'
-                  }`}
-                  onClick={() => setActiveSection('about')}
-              >
-              <span className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
-                  activeSection === 'about' ? 'w-12 opacity-100' : 'w-4 group-hover:w-10 group-hover:opacity-100'
-              }`}></span>
-                <span>ABOUT</span>
-              </a>
-            </li>
+    useEffect(() => {
+        const handleScroll = () => {
+            if (isManuallyScrolling.current) return;
 
-            <li
-                className={`group ${
-                    activeSection === 'competitions' ? 'active' : ''
-                }`}
-            >
-              <a
-                  href="#competitions"
-                  className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
-                      activeSection === 'competitions' ? 'text-white' : 'text-white/25 hover:text-white'
-                  }`}
-                  onClick={() => setActiveSection('competitions')}
-              >
-              <span className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
-                  activeSection === 'competitions' ? 'w-12 opacity-100' : 'w-4 group-hover:w-10 group-hover:opacity-100'
-              }`}></span>
-                <span>COMPETITIONS</span>
-              </a>
-            </li>
+            let closestSection: string = activeSection;
+            let minDistance = Number.POSITIVE_INFINITY;
 
-            <li
-                className={`group ${
-                    activeSection === 'projects' ? 'active' : ''
-                }`}
-            >
-              <a
-                  href="#projects"
-                  className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
-                      activeSection === 'projects' ? 'text-white' : 'text-white/25 hover:text-white'
-                  }`}
-                  onClick={() => setActiveSection('projects')}
-              >
-              <span className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
-                  activeSection === 'projects' ? 'w-12 opacity-100' : 'w-4 group-hover:w-10 group-hover:opacity-100'
-              }`}></span>
-                <span>PROJECTS</span>
-              </a>
-            </li>
+            for (const id of SECTION_IDS) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    const distance = Math.abs(rect.top);
 
-            <li
-                className={`group ${
-                    activeSection === 'events' ? 'active' : ''
-                }`}
-            >
-              <a
-                  href="#events"
-                  className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
-                      activeSection === 'events' ? 'text-white' : 'text-white/25 hover:text-white'
-                  }`}
-                  onClick={() => setActiveSection('events')}
-              >
-              <span className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
-                  activeSection === 'events' ? 'w-12 opacity-100' : 'w-4 group-hover:w-10 group-hover:opacity-100'
-              }`}></span>
-                <span>EVENTS</span>
-              </a>
-            </li>
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestSection = id;
+                    }
+                }
+            }
 
-              <li
-                  className={`group ${
-                      activeSection === 'contact' ? 'active' : ''
-                  }`}
-              >
-                  <a
-                      href="/"
-                      className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
-                          activeSection === 'contact' ? 'text-white' : 'text-white/25 hover:text-white'
-                      }`}
-                      onClick={() => setActiveSection('contact')}
-                  >
-              <span className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
-                  activeSection === 'contact' ? 'w-12 opacity-100' : 'w-4 group-hover:w-10 group-hover:opacity-100'
-              }`}></span>
-                      <span>CONTACT</span>
-                  </a>
-              </li>
+            if (closestSection !== activeSection) {
+                setActiveSection(closestSection);
+            }
+        };
 
-              <li className='mt-18 '>
-                  <span className='font-bold hover:text-[#4ade80] cursor-pointer'>
-                      <a href='/Resume.pdf'>VIEW FULL RESUME</a>
-                  </span>
-              </li>
-          </ul>
-        </div>
-      </nav>
-  );
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [activeSection]);
+
+    const handleClick = (id: string) => {
+        const el = document.getElementById(id);
+        if (el) {
+            isManuallyScrolling.current = true; // prevent scroll handler during manual scroll
+            setActiveSection(id); // immediately highlight clicked link
+
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // After scroll finishes, re-enable scroll detection
+            setTimeout(() => {
+                isManuallyScrolling.current = false;
+            }, 1000); // Adjust duration based on scroll behavior
+        }
+    };
+
+    return (
+        <nav className="mt-18">
+            <div>
+                <ul className="flex flex-col gap-4">
+                    {SECTION_IDS.map(id => (
+                        <li key={id} className={`group ${activeSection === id ? 'active' : ''}`}>
+                            <a
+                                href={`#${id}`}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleClick(id);
+                                }}
+                                className={`font-bold cursor-pointer transition-all duration-300 flex items-center gap-3 ${
+                                    activeSection === id
+                                        ? 'text-white'
+                                        : 'text-white/25 hover:text-white'
+                                }`}
+                            >
+                                <span
+                                    className={`h-0.5 opacity-25 bg-white transition-all duration-300 ease-out ${
+                                        activeSection === id
+                                            ? 'w-12 opacity-100'
+                                            : 'w-4 group-hover:w-10 group-hover:opacity-100'
+                                    }`}
+                                ></span>
+                                <span>{id.toUpperCase()}</span>
+                            </a>
+                        </li>
+                    ))}
+                    <li className="mt-18">
+                        <span className="font-bold hover:text-[#4ade80] cursor-pointer">
+                            <a href="/Resume.pdf">VIEW FULL RESUME</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;

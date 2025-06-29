@@ -22,7 +22,7 @@ function CompetitionCard() {
         .slice(0, 3);
 
     return (
-        <div className="grid gap-4 w-1/2 pb-[150px]" id='competitions'>
+        <div className="grid gap-4 w-1/2 pb-[150px] mt-[50px] scroll-mt-[100px]" id='competitions'>
             <h1 className='pl-4'>Recent Competitions</h1>
 
             {topCompetitions.map((competition: Competition) => (

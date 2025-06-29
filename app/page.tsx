@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className='py-[75px]' id='about'>
+    <div className='py-[75px] '>
       <section className='fixed flex flex-col gap-1'>
         <h2 className='text-[44px] font-bold'>Kurt Oswill McCarver</h2>
         <h3 className='text-[21px] font-semibold pb-2'>Front End Developer</h3>
@@ -41,11 +41,10 @@ export default function Home() {
 
 
       <section className='flex flex-col items-end'>
-
-        <div className='pb-[100px] flex flex-col gap-4 w-1/2 text-muted text-[16px] pl-4 pt-3' >
+        <div className='pb-[250px] flex flex-col gap-4 w-1/2 text-muted text-[16px] pl-4 pt-3 scroll-mt-32' id='about'>
           <div className='flex gap-4 shrink-0'>
             <Image src='/images/kurtoswill.jpeg' alt='my picture'
-                   width={300} height={100}
+                   width={300} height={950}
                    className='rounded-lg'
             />
             <p>

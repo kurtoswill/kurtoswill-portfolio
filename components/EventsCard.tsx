@@ -22,7 +22,7 @@ function EventsCard(): JSX.Element {
     const latestEvents = data.events.slice(0, 3);
 
     return (
-        <div className="grid gap-4 w-1/2 mt-[150px]" id="events">
+        <div className="grid gap-4 w-1/2 mt-[150px] scroll-mt-[100px]" id="events">
             <h1 className='pl-4'>Recent Events</h1>
 
             {latestEvents.map((event: Event) => (
